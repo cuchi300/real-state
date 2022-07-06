@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.destacada{
+    margin-top: 5rem;
+
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primario 50%, v.$primario 100%), url(../img/destacada.jpg);
+    background: 100%, cover;
+    background-position: center, -50rem -30rem ;
+    background-repeat: no-repeat;
+    @include m.tablet {
+        background-image: linear-gradient(to right, transparent 0%, transparent 50%, v.$primario 50%, v.$primario 100%), url(../img/destacada.jpg);
+        background-position: center, -50rem center;
+    }
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        @include m.tablet {
+            grid-template-rows: unset;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+    }
+    &__contenido{
+        padding: 5rem;
+        grid-row: 2/3;
+        overflow-x: hidden;
+        @include m.tablet {
+            grid-column: 2/3;
+            padding: 10rem 5rem;
+        }
+    }
+    &__heading{
+        color: v.$blanco;
+        text-transform: uppercase;
+
+        opacity: 0;
+        transform: translateX(-50rem);
+        transition: transform .8s, opacity .8s;
+        &--mostrar{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    &__texto{
+        color: v.$blanco;
+        font-size: 1.8rem;
+
+        opacity: 0;
+        transform: translateX(-50rem);
+        transition: transform .8s, opacity .8s;
+        &--mostrar{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    &__precio{
+        color: v.$blanco;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        transform: translateX(-50rem);
+        opacity: 0;
+        transition: transform .8s, opacity .8s;
+        &--mostrar{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    &__enlace{
+        @include m.boton(v.$blanco, v.$primario);
+        display: block;
+
+        opacity: 0;
+        transition: opacity .8s;
+        &--mostrar{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEstate Inmobiliaria</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header header__contacto">
+        <div class="header__barra contenedor">
+            <div class="header__logo">
+                <img src="build/img/logo.svg" alt="logo real state">
+            </div>
+
+            <nav class="navegacion">
+                <a href="index.html" class="navegacion__link">Inicio</a>
+                <a href="nosotros.html" class="navegacion__link">Nosotros</a>
+                <a href="propiedades.html" class="navegacion__link">Propiedades</a>
+                <a href="blog.html" class="navegacion__link">Blog</a>
+                <a href="contacto.html" class="navegacion__link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacto contenedor">
+        <h2 class="contacto__heading">Contacto</h2>
+
+        <div class="contacto__contenido">
+
+            <div class="contacto__imagen">
+                <picture>
+                     <source srcset="build/img/imagen.avif" type="image/avif">
+                     <source srcset="build/img/imagen.webp" type="image/webp">
+                     <img class="contacto__img" loading="lazy" src="build/img/imagen.jpg" alt="">
+                </picture>
+            </div>
+
+            <form action="" class="formulario">
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="nombre">Nombre:</label>
+                    <input type="text" class="formulario__input" id="nombre" placeholder="Tu Nombre">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="email">Email:</label>
+                    <input type="email" class="formulario__input" id="email" placeholder="Tu E-mail">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="telefono">Telefono:</label>
+                    <input type="tel" class="formulario__input" id="telefono" placeholder="Tu Telefono">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="seleccion">Propiedad:</label>
+                    <select id="seleccion" class="formulario__input">
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="">Casa en el bosque</option>
+                        <option value="">Duplex grande con pileta</option>
+                        <option value="">Casa con vista a la ciudad</option>
+                        <option value="">Casa en el mar</option>
+                        <option value="">Departamento de lujo</option>
+                        <option value="">Casa con salida al mar Báltico</option>
+                    </select>
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="mensaje">Mensaje:</label>
+                    <textarea class="formulario__input formulario__input--mensaje" id="mensaje" placeholder="Deja un mensaje..."></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contenedor footer__grid">
+            <div class="footer__box">
+                <h3 class="footer__heading">Navegación</h3>
+
+                <nav class="footer__navegacion">
+                    <a href="index.html" class="footer__link">Inicio</a>
+                    <a href="nosotros.html" class="footer__link">Nosotros</a>
+                    <a href="propiedades.html" class="footer__link">Propiedades</a>
+                    <a href="blog.html" class="footer__link">Blog</a>
+                    <a href="contacto.html" class="footer__link">Contacto</a>
+                </nav>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__heading">Nosotros</h3>
+                <p class="footer__texto">Real State, inicio sus oficinas en el año 1984 con dedicación y confianza, desarrollándonos en la industria de la inmobiliaria con la mayor capacitación del mercado.</p>
+            </div>
+
+            <div class="footer__box">
+                <img class="footer__imagen" src="build/img/logo.svg" alt="imagen logo">
+            </div>
+        </div>
+
+        <p class="footer__copyright">Todos los Derechos Reservados Real State &copy; 2022 - Desarrollado por Miguel Agustin Baiud</p>
+    </footer>
+
+    <script src="src/js/app.js"></script>
+</body>
+</html>

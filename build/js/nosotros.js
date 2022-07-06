@@ -1,0 +1,2 @@
+function iniciarApp(){scrollNosotros(),headerAnimation()}function headerAnimation(){document.querySelector(".header__logo").classList.add("header__logo--mostrar")}function scrollNosotros(){const o=document.querySelector(".nosotros__imagen"),n=document.querySelector(".nosotros__contenido");o.classList.add("nosotros__imagen--mostrar"),n.classList.add("nosotros__contenido--mostrar")}document.addEventListener("DOMContentLoaded",(function(){iniciarApp()}));
+//# sourceMappingURL=nosotros.js.map

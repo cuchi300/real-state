@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros{
+    &__heading{
+        @include m.heading;
+        margin: 5rem 0;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        @include m.tablet {
+            
+            @include m.grid(4,2rem);
+        }
+    }
+
+    &__imagen{
+        background-image: url(../img/destacada.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include m.tablet {
+            grid-column: 1/5;
+            margin-bottom: -15rem;
+        }
+        @include m.desktop {
+            grid-column: 2/5;
+            
+        }
+        opacity: 0;
+        transition: opacity .8s;
+        transition-delay: 1s;
+        &--mostrar{
+            opacity: 1;
+        }
+    }
+
+    &__contenido{
+        padding: 5rem;
+        background-color: v.$blanco;
+        grid-row: 2/3;
+        max-width: 70rem;
+        @include m.tablet {
+            grid-column: 1/4;
+            margin-top: -5rem;
+        }
+        @include m.desktop {
+            grid-column: 1/4;
+            margin-top: 0;
+        }
+
+        transform: translateX(-30rem);
+        opacity: 0;
+        transition: opacity .8s, transform .8s;
+        transition-delay: 1.6s;
+        &--mostrar{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
